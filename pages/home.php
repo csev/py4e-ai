@@ -16,6 +16,18 @@ $book = site_url('book');
 <div class="callout">
 <p><strong>Learning Python with AI</strong> — This site is Python for Everybody. AI assistants can help you read code, debug, and study — but the goal is for <em>you</em> to understand programming. Use AI to explain, not to skip the work of thinking and practicing.</p>
 </div>
+<?php if ( isset($_SESSION['id']) ) { ?>
+<p>
+Welcome. You are logged in with access to lessons, autograders, assignments, and badges.
+</p>
+<ul>
+<li>Work through the <a href="<?= site_h(site_url('lessons')) ?>">Lessons</a>
+ — videos, readings, and autograders in module order.</li>
+<li>Track progress on the <a href="<?= site_h(site_url('assignments')) ?>">Assignments</a>
+ page and earn <a href="<?= site_h(site_url('badges')) ?>">Badges</a>.</li>
+<li>Read the free <a href="<?= site_h($book) ?>">textbook</a>.</li>
+</ul>
+<?php } else { ?>
 <p>
 Free
 <a href="<?= site_h(site_url('lessons')) ?>">lessons</a>,
@@ -30,6 +42,7 @@ for a grade book, discussions, badges, and full access to autograders. You can a
 <a href="https://www.edx.org/bio/charles-severance" target="_blank" rel="noopener noreferrer">edX</a>,
 and other platforms listed on the main PY4E site.
 </p>
+<?php } ?>
 <div class="card-grid">
 <div class="card"><h2><a href="<?= site_h(site_url('lessons')) ?>">Lessons</a></h2><p>Lectures, slides, discussions, quizzes, and autograders in module order.</p></div>
 <div class="card"><h2><a href="<?= site_h(site_url('assignments')) ?>">Assignments</a></h2><p>See scores and completion status across graded activities.</p></div>
