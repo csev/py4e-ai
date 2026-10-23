@@ -1,0 +1,10 @@
+.DS_Store
+tsugi
+/mod/*
+!/mod/config.php
+!/mod/index.php
+!/mod/README.md
+/tools/*
+!/tools/config.php
+!/tools/index.php
+!/tools/README.md

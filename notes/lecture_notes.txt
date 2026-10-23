@@ -1,0 +1,17 @@
+“No code yet. Explain the computation.”
+
+“Give me the smallest possible example.”
+
+“Trace this with actual values.”
+
+“Now make one version that is wrong.”
+
+“What assumption are you making?”
+
+“Explain that without using the word ‘variable’.”
+
+
+“How does a computer know what to remember?”, “What does ‘for every item’ really mean?”, “Why do two names sometimes change the same list?”, or “When should I stop repeating?”
+
+This one teaches how to think computationally in a world where you can talk to the machine about the program you are trying to build.
+

@@ -1,0 +1,15 @@
+Options -MultiViews
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^\.git - [F,L]
+    RewriteRule ^(buildmenu|tsugi_settings)\.php$ - [R=404,L]
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    RewriteRule ^ tsugi.php [L,QSA]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    FallbackResource tsugi.php
+</IfModule>
