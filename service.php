@@ -13,7 +13,7 @@ if ( session_id() == "" ) {
     $LAUNCH = LTIX::session_start();
 }
 
-require __DIR__ . '/includes/site.php';
+require_once __DIR__ . '/includes/site.php';
 
 $OUTPUT->header();
 $OUTPUT->bodyStart();

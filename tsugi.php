@@ -7,6 +7,8 @@ require_once __DIR__ . '/tsugi/config.php';
 
 $launch = LTIX::session_start();
 
+require_once __DIR__ . '/includes/site.php';
+
 // /lessons => lessons.php when that file exists. Tsugi routes the rest.
 $router = new Tsugi\Util\FileRouter();
 $file = $router->fileCheck();
