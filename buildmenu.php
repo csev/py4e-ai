@@ -59,7 +59,6 @@ function buildMenu() {
         } else {
             $set->addRight(htmlentities($_SESSION['displayname']), $submenu);
         }
-        $set->addRight('Podcast', $podcast, false, 'target="_blank" rel="noopener noreferrer"');
     } else {
         $set->addRight('Login', $R . 'login');
         $set->addRight('Podcast', $podcast, true, 'target="_blank" rel="noopener noreferrer"');
@@ -91,6 +90,8 @@ function buildMenu() {
                 'hidden-xs tsugi-wc-nav-item'
             );
         }
+
+        $set->addRight('Podcast', $podcast, true, 'target="_blank" rel="noopener noreferrer"');
     }
 
     return $set;
