@@ -12,9 +12,11 @@ function buildMenu() {
         && U::isNotEmpty($CFG->lessons)
         && \Tsugi\Grades\GradeUtil::showDueDates(U::get($_SESSION, 'context_id', 0));
 
+    $register = 'https://python.dr-chuck.com/?utm=py4e-ai';
+    $podcast = 'https://ai.dr-chuck.com/';
+
     $set = new \Tsugi\UI\MenuSet();
     $set->setHome($CFG->servicename, $CFG->apphome);
-    $set->addLeft('Lessons', $R . 'lessons');
     if ( isset($_SESSION['id']) ) {
         $set->addLeft('Assignments', $R . 'assignments');
     }
@@ -29,7 +31,7 @@ function buildMenu() {
         if ( $isInstructor ) {
             $submenu->addLink('Notifications', $R . 'notifications');
         }
-        $submenu->addLink('Courses', 'https://online.dr-chuck.com', false, 'target="_self"');
+        $submenu->addLink('Register', $register, false, 'target="_self"');
         if ( isset($CFG->google_map_api_key) ) {
             $submenu->addLink('Map', $R . 'map');
         }
@@ -57,9 +59,11 @@ function buildMenu() {
         } else {
             $set->addRight(htmlentities($_SESSION['displayname']), $submenu);
         }
+        $set->addRight('Podcast', $podcast, false, 'target="_blank" rel="noopener noreferrer"');
     } else {
         $set->addRight('Login', $R . 'login');
-        $set->addRight('Courses', 'https://online.dr-chuck.com', true, 'target="_self"');
+        $set->addRight('Podcast', $podcast, true, 'target="_blank" rel="noopener noreferrer"');
+        $set->addRight('Register', $register, true, 'target="_self"');
     }
 
     if ( isset($_SESSION['id']) ) {

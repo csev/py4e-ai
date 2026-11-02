@@ -5,7 +5,6 @@
 
 $nav = [
     'left' => [
-        'lessons' => 'Lessons',
     ],
     'right' => [
         'login' => 'Login',
@@ -37,7 +36,8 @@ $nav = [
                 <li><a href="<?= site_h(site_url('book')) ?>"<?= $page === 'book' ? ' aria-current="page"' : '' ?>>Book</a></li>
             </ul>
             <ul class="nav-right">
-                <li><a href="https://online.dr-chuck.com">Courses</a></li>
+                <li><a href="https://python.dr-chuck.com/?utm=py4e-ai">Register</a></li>
+                <li><a href="https://ai.dr-chuck.com/" target="_blank" rel="noopener noreferrer">Podcast</a></li>
 <?php foreach ($nav['right'] as $slug => $label) { ?>
                 <li><a href="<?= site_h(site_url($slug)) ?>"<?= $page === $slug ? ' aria-current="page"' : '' ?>><?= site_h($label) ?></a></li>
 <?php } ?>

@@ -202,16 +202,38 @@ a:hover, a:focus { color: var(--link-hover); }
     line-height: 4.23rem;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
+.banner h1 a,
+.banner h1 a:hover,
+.banner h1 a:focus {
+    color: #fff;
+}
+.banner h1 a:hover,
+.banner h1 a:focus {
+    text-decoration: underline;
+}
 .banner p { margin: 0; color: #f5f3ff; }
 
-.notice {
-    background: #fef3c7;
-    border: 1px solid #d97706;
-    color: #78350f;
-    padding: 0.65rem 1rem;
-    margin: 0 0 1.25rem 0;
-    border-radius: 0.25rem;
+.home-register,
+.home-placeholder {
+    border: 2px solid var(--accent-dark);
+    border-radius: 0.5rem;
+    padding: 0.85rem 1.1rem;
+    margin: 0 0 1rem;
 }
+.home-register {
+    background: var(--surface);
+    font-size: 1.15rem;
+    display: flow-root;
+}
+.home-placeholder {
+    background: #fef3c7;
+    border-color: #d97706;
+    color: #78350f;
+    clear: both;
+}
+.home-register p,
+.home-placeholder p { margin: 0; }
+
 .callout {
     background: var(--surface);
     border-left: 4px solid var(--accent);
