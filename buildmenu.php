@@ -6,6 +6,7 @@ function buildMenu() {
     global $CFG, $USER;
     $R = $CFG->apphome . '/';
     $T = $CFG->wwwroot . '/';
+    $adminmenu = isset($_COOKIE['adminmenu']) && $_COOKIE['adminmenu'] == "true";
     $isInstructor = (isset($USER) && $USER && isset($USER->instructor) && $USER->instructor)
         || (isset($_SESSION['instructor']) && $_SESSION['instructor']);
     $showCalendarDueUi = isset($_SESSION['id'])
@@ -46,7 +47,7 @@ function buildMenu() {
         }
         $submenu->addLink('Privacy', $R . 'privacy');
         $submenu->addLink('Service Level', $R . 'service');
-        if ( $isInstructor ) {
+        if ( $adminmenu ) {
             $submenu->addLink('Administer', $T . 'admin/');
         }
         $submenu->addLink('Logout', $R . 'logout');
