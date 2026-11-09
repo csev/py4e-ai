@@ -91,6 +91,15 @@ function buildMenu() {
             );
         }
 
+        if ( \Tsugi\Controllers\Courses::showCoursesWidget() ) {
+            $set->addRight(
+                \Tsugi\Controllers\Catalog::coursesWidgetTag(),
+                false,
+                true,
+                'hidden-xs tsugi-wc-nav-item'
+            );
+        }
+
         $set->addRight('Podcast', $podcast, true, 'target="_blank" rel="noopener noreferrer"');
     }
 
