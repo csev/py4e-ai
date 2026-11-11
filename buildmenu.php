@@ -41,10 +41,7 @@ function buildMenu() {
             $submenu->addLink('Calendar', $R . 'calendar');
         }
         $submenu->addLink('Badges', $R . 'badges');
-        $submenu->addLink('Materials', $R . 'materials');
-        if ( $CFG->providekeys ) {
-            $submenu->addLink('LMS Integration', $T . 'settings');
-        }
+        $submenu->addLink('LMS Integration', $T . 'settings');
         $submenu->addLink('Privacy', $R . 'privacy');
         $submenu->addLink('Service Level', $R . 'service');
         if ( $adminmenu ) {
